@@ -1,0 +1,21 @@
+<h1>UbiCare IT - Support</h1>
+
+<table border = '1'>
+  <tr>
+    <th>Created By</th>
+    <th>Issue</th>
+    <th>Date Created</th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= link_to post.comments, post %></td>
+    <td><%= post.created  %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
