@@ -1,4 +1,7 @@
 It::Application.routes.draw do
+
+  get "users/new"
+
   resources :posts
 
   # The priority is based upon order of creation:
